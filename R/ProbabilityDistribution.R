@@ -18,3 +18,12 @@ p1 <- pnorm(48,mean=50,sd=10,lower.tail=T); p1
 p2-p1
 
 # T Distribution
+par(mfrow=c(1,3))
+x <- seq(-3,3,by=0.1)
+dt(x,df=5)
+plot(x,dt(x,df=2),type='l')
+plot(x,dt(x,df=10),type='l')
+plot(x,dt(x,df=2),type='l',ylim=(c(0,0.4)))
+plot(x,dt(x,df=5),type='l',ylim=(c(0,0.4)))
+plot(x,dt(x,df=10),type='l',ylim=(c(0,0.4)))
+
