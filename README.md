@@ -22,3 +22,26 @@ proceed? Y 선택
 3. 추가 패키지 설치 시에는
 
 conda install [패키지명]
+
+
+import pandas as pd
+
+df = pd.read_csv('adult.data', skipinitialspace=True)
+strcolumns = df.select_dtypes(include='object').columns
+strfeatures = strcolumns[:-1]
+target = strcolumns[-1]
+
+from sklearn import preprocessing
+
+def str_encoding(col):
+    le = preprocessing.LabelEncoder()
+    le.fit(col)
+    return le.transform(col)
+    
+encodedf = df[strfeatures].apply(str_encoding)
+
+target_le = preprocessing.LabelEncoder()
+target_le.fit(df[target])
+encodetarget = target_le.transform(df[target])
+
+target_le.inverse_transform(encodetarget)
