@@ -1,0 +1,54 @@
+
+1. 리스트(list)에서 중복을 제거 하는 함수를 작성하시오.
+
+   function 이름 : removeDup
+   argument type : list
+   argument 개수 : 1
+   return type : list
+   사용 예시
+      removeDup([1, 2, 2, 3])
+          [1, 2, 3]
+      removeDup(['a', 'a', 'a', 'a', 'b'])
+          ['a', 'b']
+   
+
+2. 세개의 숫자를 받아서 가능한 모든 조합을 추출하는 함수를 작성하시오.
+   
+   function 이름 : numberCombination
+   argument type : int
+   argument 개수 : 3
+   return type : list of list
+   사용 예시
+      numberCombination(1, 2, 3)
+          [[1, 2, 3],
+           [1, 3, 2],
+           [2, 1, 3],
+           [2, 3, 1],
+           [3, 1, 2],
+           [3, 2, 1]]
+           
+
+3. 문자열을 받아서 홀수 자리에 있는 문자를 삭제하시오. 
+
+   function 이름 : removeOdd
+   argument type : str
+   argument 개수 : 1
+   return type : str
+   사용 예시
+      removeOdd('Hello World!')
+          'el ol!'
+
+
+
+4. 두개 이상의 리스트를 입력 받아서 모든 리스트의 값들 중에 유일한 값들로 구성된 리스트를 정렬하여 반환하는 함수를 작성하시오.
+
+   function 이름 : uniquelist
+   argument type : list
+   argument 개수 : 제한 없음(가변적)
+   return type : list
+   사용 예시
+      uniquelist(['ddd', 'bbb', 'ccc'], ['aaa', 'bbb'])
+          ['aaa', 'bbb', 'ccc', 'ddd']
+      uniquelist(['ddd', 'bbb'], ['aaa', 'bbb'], ['kkk', 'ddd'])
+          ['aaa', 'bbb', 'ddd', 'kkk']
+   
