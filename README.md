@@ -46,34 +46,3 @@ def str_encoding(col):
     
     
 encodedf = df[strfeatures].apply(str_encoding)
-
-
-기말고사
-
-다음은 데이터를 이용하여 예측 모델을 생성하고 그 결과를 제출하시오.
-     1. data.csv : 예측 모델 생성 데이터 
-     2. real.csv : 예측 대상 데이터
-     3. description.txt : 데이터 설명
- 
- 
-제출 형식
-     1. 파일 이름 : 이름.csv
-     2. 컬럼 : ID, ANSWER
-          - ID : real.csv 의 ID 컬럼 데이터 
-          - ANSWER : real.csv 데이터에 대한 예측 값 ( 예측값은 data.csv의 target 값의 형태와 동일한 형태로 제출해야 함)
-          
- 채점 기준 
-     if accuracy > 85 : A
-     elif accuracy > 80 : B
-     elif accuracy > 60 : C
-     else D
-
-
-
-target_le = preprocessing.LabelEncoder()
-
-target_le.fit(df[target])
-
-encodetarget = target_le.transform(df[target])
-
-target_le.inverse_transform(encodetarget)
